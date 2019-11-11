@@ -1,0 +1,10 @@
+VertebrateName BodyTemperature SkinCover GivesBirth HasLegs Hibernate Class
+human warm-blooded hair yes yes no mammal
+python cold-blooded scales no no yes reptile
+salmon cold-blooded scales no no no fish
+whale warm-blooded hair yes no no mammal
+frog cold-blooded none no yes yes amphibian
+komodo-dragon cold-blooded scales no yes no reptile 
+bat warm-blooded hair yes yes yes mammal
+pigeon warm-blooded feathers no yes no bird
+

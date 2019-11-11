@@ -1,0 +1,9 @@
+X Y Quad
+plus plus first
+plus minus forth
+minus plus second
+minus minus third
+plus plus first
+plus minus forth
+minus plus second
+minus minus third
