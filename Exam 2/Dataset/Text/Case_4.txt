@@ -1,0 +1,422 @@
+namanjain@Namans-MacBook-Air Exam 2 % python3 ml_exam.py
+#### FILE DATA ####
+24 Private 325596 Assoc-voc 11 Married-civ-spouse Machine-op-inspct Husband White Male 0 0 45 United-States
+39 Private 98886 7th-8th 4 Married-civ-spouse Other-service Husband White Male 4508 0 40 Mexico
+41 Private 266439 HS-grad 9 Married-civ-spouse Machine-op-inspct Husband White Male 0 0 40 United-States
+21 Private 200121 HS-grad 9 Never-married Handlers-cleaners Own-child White Male 0 0 40 United-States
+18 Private 111019 10th 6 Never-married Other-service Own-child White Male 0 0 24 United-States
+47 Self-emp-inc 308241 HS-grad 9 Married-civ-spouse Sales Wife White Female 0 0 40 United-States
+57 State-gov 170108 Bachelors 13 Married-civ-spouse Exec-managerial Husband White Male 0 1902 40 United-States
+54 Self-emp-inc 195904 Assoc-voc 11 Married-civ-spouse Craft-repair Husband White Male 0 0 40 United-States
+47 Federal-gov 218325 Assoc-acdm 12 Married-civ-spouse Handlers-cleaners Husband Asian-Pac-Islander Male 0 0 40 Philippines
+51 Private 126528 HS-grad 9 Separated Craft-repair Not-in-family White Male 0 0 60 United-States
+30 Private 210541 HS-grad 9 Divorced Craft-repair Not-in-family White Female 0 0 40 United-States
+36 Private 34364 Assoc-acdm 12 Separated Tech-support Not-in-family White Female 0 0 3 United-States
+51 Self-emp-not-inc 195634 Masters 14 Never-married Exec-managerial Not-in-family White Male 10520 0 20 United-States
+30 Private 201697 Bachelors 13 Never-married Other-service Not-in-family White Male 0 0 40 United-States
+33 Private 30612 Some-college 10 Married-civ-spouse Sales Husband White Male 0 0 40 United-States
+61 Private 27086 HS-grad 9 Divorced Transport-moving Not-in-family White Male 0 0 40 United-States
+27 Private 292883 HS-grad 9 Married-civ-spouse Machine-op-inspct Husband Black Male 0 0 40 United-States
+23 Private 194630 HS-grad 9 Separated Machine-op-inspct Own-child White Male 0 0 53 United-States
+31 Private 92179 10th 6 Divorced Machine-op-inspct Not-in-family White Male 0 0 40 United-States
+22 Federal-gov 316438 HS-grad 9 Never-married Prof-specialty Own-child White Male 0 0 35 United-States
+
+#### TABULATED DATA ####
+Traceback (most recent call last):
+  File "ml_exam.py", line 53, in <module>
+    display(HTML(
+NameError: name 'display' is not defined
+namanjain@Namans-MacBook-Air Exam 2 % python3 ml_exam.py
+#### FILE DATA ####
+24 Private 325596 Assoc-voc 11 Married-civ-spouse Machine-op-inspct Husband White Male 0 0 45 United-States
+39 Private 98886 7th-8th 4 Married-civ-spouse Other-service Husband White Male 4508 0 40 Mexico
+41 Private 266439 HS-grad 9 Married-civ-spouse Machine-op-inspct Husband White Male 0 0 40 United-States
+21 Private 200121 HS-grad 9 Never-married Handlers-cleaners Own-child White Male 0 0 40 United-States
+18 Private 111019 10th 6 Never-married Other-service Own-child White Male 0 0 24 United-States
+47 Self-emp-inc 308241 HS-grad 9 Married-civ-spouse Sales Wife White Female 0 0 40 United-States
+57 State-gov 170108 Bachelors 13 Married-civ-spouse Exec-managerial Husband White Male 0 1902 40 United-States
+54 Self-emp-inc 195904 Assoc-voc 11 Married-civ-spouse Craft-repair Husband White Male 0 0 40 United-States
+47 Federal-gov 218325 Assoc-acdm 12 Married-civ-spouse Handlers-cleaners Husband Asian-Pac-Islander Male 0 0 40 Philippines
+51 Private 126528 HS-grad 9 Separated Craft-repair Not-in-family White Male 0 0 60 United-States
+30 Private 210541 HS-grad 9 Divorced Craft-repair Not-in-family White Female 0 0 40 United-States
+36 Private 34364 Assoc-acdm 12 Separated Tech-support Not-in-family White Female 0 0 3 United-States
+51 Self-emp-not-inc 195634 Masters 14 Never-married Exec-managerial Not-in-family White Male 10520 0 20 United-States
+30 Private 201697 Bachelors 13 Never-married Other-service Not-in-family White Male 0 0 40 United-States
+33 Private 30612 Some-college 10 Married-civ-spouse Sales Husband White Male 0 0 40 United-States
+61 Private 27086 HS-grad 9 Divorced Transport-moving Not-in-family White Male 0 0 40 United-States
+27 Private 292883 HS-grad 9 Married-civ-spouse Machine-op-inspct Husband Black Male 0 0 40 United-States
+23 Private 194630 HS-grad 9 Separated Machine-op-inspct Own-child White Male 0 0 53 United-States
+31 Private 92179 10th 6 Divorced Machine-op-inspct Not-in-family White Male 0 0 40 United-States
+22 Federal-gov 316438 HS-grad 9 Never-married Prof-specialty Own-child White Male 0 0 35 United-States
+
+#### TABULATED DATA ####
+#### PREPROCESSED DATA ####
+['23' 'Private' '134446' 'HS-grad' '9' 'Separated' 'Machine-op-inspct'
+ 'Unmarried' 'Black' 'Male' '0' '0' '54' 'United-States']
+[0, 8]
+[1, 2, 3, 4, 5, 6, 7, 9]
+['65' '?' 'HS-grad' 'Married-civ-spouse' '?' 'Husband' 'White' 'Male' '40'
+ 'United-States']
+-------------------------------
+Data point with missing value:
+['65' '?' 'HS-grad' 'Married-civ-spouse' '?' 'Husband' 'White' 'Male' '40'
+ 'United-States']
+My nearest equivalent:
+['64' 'Local-gov' 'HS-grad' 'Married-civ-spouse' 'Adm-clerical' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+My updated value:
+['65' 'Local-gov' 'HS-grad' 'Married-civ-spouse' 'Adm-clerical' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+-------------------------------
+Data point with missing value:
+['31' 'Self-emp-not-inc' 'Masters' 'Married-civ-spouse' 'Sales' 'Husband'
+ 'Asian-Pac-Islander' 'Male' '40' '?']
+My nearest equivalent:
+['25' 'Private' '9th' 'Married-civ-spouse' 'Handlers-cleaners' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+My updated value:
+['31' 'Self-emp-not-inc' 'Masters' 'Married-civ-spouse' 'Sales' 'Husband'
+ 'Asian-Pac-Islander' 'Male' '40' 'United-States']
+-------------------------------
+Data point with missing value:
+['42' 'Private' 'Bachelors' 'Married-civ-spouse' 'Prof-specialty'
+ 'Husband' 'White' 'Male' '80' '?']
+My nearest equivalent:
+['50' 'Self-emp-not-inc' 'Prof-school' 'Married-civ-spouse'
+ 'Prof-specialty' 'Husband' 'White' 'Male' '80' 'United-States']
+My updated value:
+['42' 'Private' 'Bachelors' 'Married-civ-spouse' 'Prof-specialty'
+ 'Husband' 'White' 'Male' '80' 'United-States']
+-------------------------------
+Data point with missing value:
+['52' '?' 'Assoc-acdm' 'Married-civ-spouse' '?' 'Wife' 'White' 'Female'
+ '20' 'United-States']
+My nearest equivalent:
+['58' 'Private' 'HS-grad' 'Married-civ-spouse' 'Craft-repair' 'Husband'
+ 'White' 'Male' '16' 'United-States']
+My updated value:
+['52' 'Private' 'Assoc-acdm' 'Married-civ-spouse' 'Craft-repair' 'Wife'
+ 'White' 'Female' '20' 'United-States']
+-------------------------------
+Data point with missing value:
+['64' '?' 'Bachelors' 'Married-civ-spouse' '?' 'Husband' 'White' 'Male'
+ '40' 'United-States']
+My nearest equivalent:
+['64' 'Local-gov' 'HS-grad' 'Married-civ-spouse' 'Adm-clerical' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+My updated value:
+['64' 'Local-gov' 'Bachelors' 'Married-civ-spouse' 'Adm-clerical'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+-------------------------------
+Data point with missing value:
+['24' '?' 'Some-college' 'Never-married' '?' 'Not-in-family' 'White'
+ 'Female' '38' 'United-States']
+My nearest equivalent:
+['23' 'Private' 'Some-college' 'Never-married' 'Other-service'
+ 'Not-in-family' 'Black' 'Male' '30' 'United-States']
+My updated value:
+['24' 'Private' 'Some-college' 'Never-married' 'Other-service'
+ 'Not-in-family' 'White' 'Female' '38' 'United-States']
+-------------------------------
+Data point with missing value:
+['19' '?' 'Some-college' 'Never-married' '?' 'Own-child' 'White' 'Female'
+ '12' 'United-States']
+My nearest equivalent:
+['18' 'Private' 'Some-college' 'Never-married' 'Other-service' 'Own-child'
+ 'White' 'Female' '12' 'United-States']
+My updated value:
+['19' 'Private' 'Some-college' 'Never-married' 'Other-service' 'Own-child'
+ 'White' 'Female' '12' 'United-States']
+-------------------------------
+Data point with missing value:
+['58' '?' '11th' 'Married-spouse-absent' '?' 'Not-in-family' 'White'
+ 'Female' '20' 'United-States']
+My nearest equivalent:
+['63' 'Private' 'Some-college' 'Married-civ-spouse' 'Sales' 'Husband'
+ 'White' 'Male' '15' 'United-States']
+My updated value:
+['58' 'Private' '11th' 'Married-spouse-absent' 'Sales' 'Not-in-family'
+ 'White' 'Female' '20' 'United-States']
+-------------------------------
+Data point with missing value:
+['28' '?' 'Some-college' 'Married-civ-spouse' '?' 'Other-relative' 'White'
+ 'Female' '20' 'United-States']
+My nearest equivalent:
+['23' 'Private' 'HS-grad' 'Never-married' 'Sales' 'Own-child' 'Black'
+ 'Male' '20' 'United-States']
+My updated value:
+['28' 'Private' 'Some-college' 'Married-civ-spouse' 'Sales'
+ 'Other-relative' 'White' 'Female' '20' 'United-States']
+-------------------------------
+Data point with missing value:
+['28' '?' '11th' 'Never-married' '?' 'Unmarried' 'Black' 'Female' '30'
+ 'United-States']
+My nearest equivalent:
+['28' 'Private' 'Assoc-voc' 'Never-married' 'Exec-managerial'
+ 'Not-in-family' 'White' 'Female' '23' 'United-States']
+My updated value:
+['28' 'Private' '11th' 'Never-married' 'Exec-managerial' 'Unmarried'
+ 'Black' 'Female' '30' 'United-States']
+['24' 'Private' 'Assoc-voc' 'Married-civ-spouse' 'Machine-op-inspct'
+ 'Husband' 'White' 'Male' '45' 'United-States']
+Predicted Class: <=50K
+-------------
+['39' 'Private' '7th-8th' 'Married-civ-spouse' 'Other-service' 'Husband'
+ 'White' 'Male' '40' 'Mexico']
+Predicted Class: >50K
+-------------
+['41' 'Private' 'HS-grad' 'Married-civ-spouse' 'Machine-op-inspct'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['21' 'Private' 'HS-grad' 'Never-married' 'Handlers-cleaners' 'Own-child'
+ 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['18' 'Private' '10th' 'Never-married' 'Other-service' 'Own-child' 'White'
+ 'Male' '24' 'United-States']
+Predicted Class: <=50K
+-------------
+['47' 'Self-emp-inc' 'HS-grad' 'Married-civ-spouse' 'Sales' 'Wife' 'White'
+ 'Female' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['57' 'State-gov' 'Bachelors' 'Married-civ-spouse' 'Exec-managerial'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['54' 'Self-emp-inc' 'Assoc-voc' 'Married-civ-spouse' 'Craft-repair'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['47' 'Federal-gov' 'Assoc-acdm' 'Married-civ-spouse' 'Handlers-cleaners'
+ 'Husband' 'Asian-Pac-Islander' 'Male' '40' 'Philippines']
+Predicted Class: <=50K
+-------------
+['51' 'Private' 'HS-grad' 'Separated' 'Craft-repair' 'Not-in-family'
+ 'White' 'Male' '60' 'United-States']
+Predicted Class: >50K
+-------------
+['30' 'Private' 'HS-grad' 'Divorced' 'Craft-repair' 'Not-in-family'
+ 'White' 'Female' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['36' 'Private' 'Assoc-acdm' 'Separated' 'Tech-support' 'Not-in-family'
+ 'White' 'Female' '3' 'United-States']
+Predicted Class: <=50K
+-------------
+['51' 'Self-emp-not-inc' 'Masters' 'Never-married' 'Exec-managerial'
+ 'Not-in-family' 'White' 'Male' '20' 'United-States']
+namanjain@Namans-MacBook-Air Exam 2 % python3 ml_exam.py
+#### FILE DATA ####
+24 Private 325596 Assoc-voc 11 Married-civ-spouse Machine-op-inspct Husband White Male 0 0 45 United-States
+39 Private 98886 7th-8th 4 Married-civ-spouse Other-service Husband White Male 4508 0 40 Mexico
+41 Private 266439 HS-grad 9 Married-civ-spouse Machine-op-inspct Husband White Male 0 0 40 United-States
+21 Private 200121 HS-grad 9 Never-married Handlers-cleaners Own-child White Male 0 0 40 United-States
+18 Private 111019 10th 6 Never-married Other-service Own-child White Male 0 0 24 United-States
+47 Self-emp-inc 308241 HS-grad 9 Married-civ-spouse Sales Wife White Female 0 0 40 United-States
+57 State-gov 170108 Bachelors 13 Married-civ-spouse Exec-managerial Husband White Male 0 1902 40 United-States
+54 Self-emp-inc 195904 Assoc-voc 11 Married-civ-spouse Craft-repair Husband White Male 0 0 40 United-States
+47 Federal-gov 218325 Assoc-acdm 12 Married-civ-spouse Handlers-cleaners Husband Asian-Pac-Islander Male 0 0 40 Phili
+ppines
+51 Private 126528 HS-grad 9 Separated Craft-repair Not-in-family White Male 0 0 60 United-States
+30 Private 210541 HS-grad 9 Divorced Craft-repair Not-in-family White Female 0 0 40 United-States
+36 Private 34364 Assoc-acdm 12 Separated Tech-support Not-in-family White Female 0 0 3 United-States
+51 Self-emp-not-inc 195634 Masters 14 Never-married Exec-managerial Not-in-family White Male 10520 0 20 United-States
+30 Private 201697 Bachelors 13 Never-married Other-service Not-in-family White Male 0 0 40 United-States
+33 Private 30612 Some-college 10 Married-civ-spouse Sales Husband White Male 0 0 40 United-States
+61 Private 27086 HS-grad 9 Divorced Transport-moving Not-in-family White Male 0 0 40 United-States
+27 Private 292883 HS-grad 9 Married-civ-spouse Machine-op-inspct Husband Black Male 0 0 40 United-States
+23 Private 194630 HS-grad 9 Separated Machine-op-inspct Own-child White Male 0 0 53 United-States
+31 Private 92179 10th 6 Divorced Machine-op-inspct Not-in-family White Male 0 0 40 United-States
+22 Federal-gov 316438 HS-grad 9 Never-married Prof-specialty Own-child White Male 0 0 35 United-States
+
+#### TABULATED DATA ####
+#### PREPROCESSED DATA ####
+['23' 'Private' '134446' 'HS-grad' '9' 'Separated' 'Machine-op-inspct'
+ 'Unmarried' 'Black' 'Male' '0' '0' '54' 'United-States']
+[0, 8]
+[1, 2, 3, 4, 5, 6, 7, 9]
+['65' '?' 'HS-grad' 'Married-civ-spouse' '?' 'Husband' 'White' 'Male' '40'
+ 'United-States']
+-------------------------------
+Data point with missing value:
+['65' '?' 'HS-grad' 'Married-civ-spouse' '?' 'Husband' 'White' 'Male' '40'
+ 'United-States']
+My nearest equivalent:
+['64' 'Local-gov' 'HS-grad' 'Married-civ-spouse' 'Adm-clerical' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+My updated value:
+['65' 'Local-gov' 'HS-grad' 'Married-civ-spouse' 'Adm-clerical' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+-------------------------------
+Data point with missing value:
+['31' 'Self-emp-not-inc' 'Masters' 'Married-civ-spouse' 'Sales' 'Husband'
+ 'Asian-Pac-Islander' 'Male' '40' '?']
+My nearest equivalent:
+['25' 'Private' '9th' 'Married-civ-spouse' 'Handlers-cleaners' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+My updated value:
+['31' 'Self-emp-not-inc' 'Masters' 'Married-civ-spouse' 'Sales' 'Husband'
+ 'Asian-Pac-Islander' 'Male' '40' 'United-States']
+-------------------------------
+Data point with missing value:
+['42' 'Private' 'Bachelors' 'Married-civ-spouse' 'Prof-specialty'
+ 'Husband' 'White' 'Male' '80' '?']
+My nearest equivalent:
+['50' 'Self-emp-not-inc' 'Prof-school' 'Married-civ-spouse'
+ 'Prof-specialty' 'Husband' 'White' 'Male' '80' 'United-States']
+My updated value:
+['42' 'Private' 'Bachelors' 'Married-civ-spouse' 'Prof-specialty'
+ 'Husband' 'White' 'Male' '80' 'United-States']
+-------------------------------
+Data point with missing value:
+['52' '?' 'Assoc-acdm' 'Married-civ-spouse' '?' 'Wife' 'White' 'Female'
+ '20' 'United-States']
+My nearest equivalent:
+['58' 'Private' 'HS-grad' 'Married-civ-spouse' 'Craft-repair' 'Husband'
+ 'White' 'Male' '16' 'United-States']
+My updated value:
+['52' 'Private' 'Assoc-acdm' 'Married-civ-spouse' 'Craft-repair' 'Wife'
+ 'White' 'Female' '20' 'United-States']
+-------------------------------
+Data point with missing value:
+['64' '?' 'Bachelors' 'Married-civ-spouse' '?' 'Husband' 'White' 'Male'
+ '40' 'United-States']
+My nearest equivalent:
+['64' 'Local-gov' 'HS-grad' 'Married-civ-spouse' 'Adm-clerical' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+My updated value:
+['64' 'Local-gov' 'Bachelors' 'Married-civ-spouse' 'Adm-clerical'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+-------------------------------
+Data point with missing value:
+['24' '?' 'Some-college' 'Never-married' '?' 'Not-in-family' 'White'
+ 'Female' '38' 'United-States']
+My nearest equivalent:
+['23' 'Private' 'Some-college' 'Never-married' 'Other-service'
+ 'Not-in-family' 'Black' 'Male' '30' 'United-States']
+My updated value:
+['24' 'Private' 'Some-college' 'Never-married' 'Other-service'
+ 'Not-in-family' 'White' 'Female' '38' 'United-States']
+-------------------------------
+Data point with missing value:
+['19' '?' 'Some-college' 'Never-married' '?' 'Own-child' 'White' 'Female'
+ '12' 'United-States']
+My nearest equivalent:
+['18' 'Private' 'Some-college' 'Never-married' 'Other-service' 'Own-child'
+ 'White' 'Female' '12' 'United-States']
+My updated value:
+['19' 'Private' 'Some-college' 'Never-married' 'Other-service' 'Own-child'
+ 'White' 'Female' '12' 'United-States']
+-------------------------------
+Data point with missing value:
+['58' '?' '11th' 'Married-spouse-absent' '?' 'Not-in-family' 'White'
+ 'Female' '20' 'United-States']
+My nearest equivalent:
+['63' 'Private' 'Some-college' 'Married-civ-spouse' 'Sales' 'Husband'
+ 'White' 'Male' '15' 'United-States']
+My updated value:
+['58' 'Private' '11th' 'Married-spouse-absent' 'Sales' 'Not-in-family'
+ 'White' 'Female' '20' 'United-States']
+-------------------------------
+Data point with missing value:
+['28' '?' 'Some-college' 'Married-civ-spouse' '?' 'Other-relative' 'White'
+ 'Female' '20' 'United-States']
+My nearest equivalent:
+['23' 'Private' 'HS-grad' 'Never-married' 'Sales' 'Own-child' 'Black'
+ 'Male' '20' 'United-States']
+My updated value:
+['28' 'Private' 'Some-college' 'Married-civ-spouse' 'Sales'
+ 'Other-relative' 'White' 'Female' '20' 'United-States']
+-------------------------------
+Data point with missing value:
+['28' '?' '11th' 'Never-married' '?' 'Unmarried' 'Black' 'Female' '30'
+ 'United-States']
+My nearest equivalent:
+['28' 'Private' 'Assoc-voc' 'Never-married' 'Exec-managerial'
+ 'Not-in-family' 'White' 'Female' '23' 'United-States']
+My updated value:
+['28' 'Private' '11th' 'Never-married' 'Exec-managerial' 'Unmarried'
+ 'Black' 'Female' '30' 'United-States']
+['24' 'Private' 'Assoc-voc' 'Married-civ-spouse' 'Machine-op-inspct'
+ 'Husband' 'White' 'Male' '45' 'United-States']
+Predicted Class: <=50K
+-------------
+['39' 'Private' '7th-8th' 'Married-civ-spouse' 'Other-service' 'Husband'
+ 'White' 'Male' '40' 'Mexico']
+Predicted Class: >50K
+-------------
+['41' 'Private' 'HS-grad' 'Married-civ-spouse' 'Machine-op-inspct'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['21' 'Private' 'HS-grad' 'Never-married' 'Handlers-cleaners' 'Own-child'
+ 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['18' 'Private' '10th' 'Never-married' 'Other-service' 'Own-child' 'White'
+ 'Male' '24' 'United-States']
+Predicted Class: <=50K
+-------------
+['47' 'Self-emp-inc' 'HS-grad' 'Married-civ-spouse' 'Sales' 'Wife' 'White'
+ 'Female' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['57' 'State-gov' 'Bachelors' 'Married-civ-spouse' 'Exec-managerial'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['54' 'Self-emp-inc' 'Assoc-voc' 'Married-civ-spouse' 'Craft-repair'
+ 'Husband' 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['47' 'Federal-gov' 'Assoc-acdm' 'Married-civ-spouse' 'Handlers-cleaners'
+ 'Husband' 'Asian-Pac-Islander' 'Male' '40' 'Philippines']
+Predicted Class: <=50K
+-------------
+['51' 'Private' 'HS-grad' 'Separated' 'Craft-repair' 'Not-in-family'
+ 'White' 'Male' '60' 'United-States']
+Predicted Class: >50K
+-------------
+['30' 'Private' 'HS-grad' 'Divorced' 'Craft-repair' 'Not-in-family'
+ 'White' 'Female' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['36' 'Private' 'Assoc-acdm' 'Separated' 'Tech-support' 'Not-in-family'
+ 'White' 'Female' '3' 'United-States']
+Predicted Class: <=50K
+-------------
+['51' 'Self-emp-not-inc' 'Masters' 'Never-married' 'Exec-managerial'
+ 'Not-in-family' 'White' 'Male' '20' 'United-States']
+Predicted Class: <=50K
+-------------
+['30' 'Private' 'Bachelors' 'Never-married' 'Other-service'
+ 'Not-in-family' 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['33' 'Private' 'Some-college' 'Married-civ-spouse' 'Sales' 'Husband'
+ 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['61' 'Private' 'HS-grad' 'Divorced' 'Transport-moving' 'Not-in-family'
+ 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['27' 'Private' 'HS-grad' 'Married-civ-spouse' 'Machine-op-inspct'
+ 'Husband' 'Black' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['23' 'Private' 'HS-grad' 'Separated' 'Machine-op-inspct' 'Own-child'
+ 'White' 'Male' '53' 'United-States']
+Predicted Class: <=50K
+-------------
+['31' 'Private' '10th' 'Divorced' 'Machine-op-inspct' 'Not-in-family'
+ 'White' 'Male' '40' 'United-States']
+Predicted Class: <=50K
+-------------
+['22' 'Federal-gov' 'HS-grad' 'Never-married' 'Prof-specialty' 'Own-child'
+ 'White' 'Male' '35' 'United-States']
+Predicted Class: <=50K
+-------------
+namanjain@Namans-MacBook-Air Exam 2 % 

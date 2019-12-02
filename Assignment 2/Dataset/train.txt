@@ -1,3 +1,0 @@
-1 1 A minus
-0 0 Z plus
-0 0 E minus

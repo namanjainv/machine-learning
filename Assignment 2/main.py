@@ -129,6 +129,16 @@ def initializeHashMap(classes):
         classMap[class_name] = 0 
     return classMap
 
+def findMaxClass(hashMap):
+    print(hashMap)
+    max_class = None
+    max_value = -1
+    for class_name in hashMap:
+        if( max_value < hashMap[class_name] ):
+            max_class = class_name
+            max_value = hashMap[class_name]
+    return max_class
+
 def __main__(argv):
     # try:
     train_file = argv[1]
@@ -146,13 +156,15 @@ def __main__(argv):
     for i in range(np.shape(Y_test)[0]):
         myMap = initializeHashMap(n_classes)
         testPoint = X_test[i]
-        print(testPoint)
-        print(myMap)
-        k_nearest_nodes = knn(testPoint, X_train, Y_train, k = 2)
+        k_nearest_nodes = knn(testPoint, X_train, Y_train, k = 1)
         for near_node in k_nearest_nodes:
             class_name = near_node.get("class")
             myMap[class_name] += 1
-        print(myMap)
+        predClass = findMaxClass(myMap)
+        if(predClass == Y_test[i]):
+            print("Correctly predicted")
+        else:
+            print("Wrong prediction")
     # except:
         # print("Run the program with: python3 main.py Dataset/train.txt Dataset/test.txt 2")
 

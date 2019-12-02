@@ -1,2 +1,0 @@
-0 0 A minus
-1 1 B plus

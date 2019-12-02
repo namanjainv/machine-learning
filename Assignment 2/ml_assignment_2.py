@@ -7,18 +7,18 @@ Original file is located at
     https://colab.research.google.com/drive/1GomaSSsEdOy5TCduTfLlQTyYa5-7vWX2
 """
 
-# from google.colab import drive
-# drive.mount('/content/drive')
+from google.colab import drive
+drive.mount('/content/drive')
 
-# from google.colab import files
-# from IPython.display import HTML, display
+from google.colab import files
+from IPython.display import HTML, display
 
 import numpy as np
 import io
 
 # REQUIRED
-datasetFileName = 'Dataset/Assignment2_dataset.txt'
-classAttributeIndex = 6
+datasetFileName = 'Assignment2_dataset.txt'
+classAttributeIndex = 8
 
 # PARAMETERS
 dataSplitRatio = 0.2
@@ -44,7 +44,12 @@ def tabulateData( data, delimiter = ' ', hasHeader = True ):
 
 print("#### TABULATED DATA ####")
 tabulatedData = tabulateData( fileData )
-print(tabulatedData)
+display(HTML(
+   '<table><tr>{}</tr></table>'.format(
+       '</tr><tr>'.join(
+           '<td>{}</td>'.format('</td><td>'.join(str(_) for _ in row)) for row in tabulatedData)
+       )
+))
 
 # Removing data points which consists of null values
 def preprocessData( tabulatedData ):
@@ -53,15 +58,20 @@ def preprocessData( tabulatedData ):
   for dataPoint in tabulatedData:
     if( len(dataPoint) < requiredLength ):
       continue
-    if "none" in dataPoint:
-      continue
+    # if "none" in dataPoint:
+    #   continue
     X.append( dataPoint[ :requiredLength ] )
   
   return X
 
 print("#### PREPROCESSED DATA ####")
 preprocessedData = preprocessData( tabulatedData )
-print(preprocessedData)
+display(HTML(
+   '<table><tr>{}</tr></table>'.format(
+       '</tr><tr>'.join(
+           '<td>{}</td>'.format('</td><td>'.join(str(_) for _ in row)) for row in preprocessedData)
+       )
+))
 
 # Function to split data into Training and Testing
 def processData( preprocessedData, classAttributeIndex = classAttributeIndex, split = dataSplitRatio ):
@@ -169,12 +179,12 @@ def knn( X_train, Y_train, X_test, Y_test, k = 3 ):
       truePredicted += 1
       
   print("Accuracy: " + str( truePredicted*100.0/N_test ) )
-  
-print("---------------------- KNN ---------------------------")
+
+
+print('---------------------------- KNN ------------------------------------')
 knn( X_train, Y_train, X_test, Y_test )
 
-del headers[classAttributeIndex]
-# del headers[0]
+del headers[ classAttributeIndex ]
 
 def bayersian( X_train, Y_train, X_test, Y_test, headers, classAttributeIndex ):
 
@@ -269,7 +279,17 @@ def bayersian( X_train, Y_train, X_test, Y_test, headers, classAttributeIndex ):
       
   print("Accuracy: " + str( truePredicted*100.0/N_test ) )
 
-print("---------------------- Naive Bayes ---------------------------")
+print('---------------------------- Naive Bayes ------------------------------------')
 X_train, Y_train, X_test, Y_test, headers = processData(preprocessedData)
+print("#### TRAINING DATA ####")
+print(X_train)
+print(Y_train)
+print()
+print("#### TESTING DATA ####")
+print(X_test)
+print(Y_test)
+headers = headers[1:]
+X_train = X_train[:, 1:]
+X_test = X_test[:, 1:]
 bayersian( X_train, Y_train, X_test, Y_test, headers, classAttributeIndex = classAttributeIndex )
 
